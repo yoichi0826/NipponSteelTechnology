@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="革新的なアイデアであなたの暮らしをもっと良くする。日本製鉄技巧。">
+    <meta name="keywords" content=",">
+    <!--ビューポート-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>事業実績 | 日本製鉄技巧</title>
+    <link rel="icon" href="../favicon.ico">
+    <link href="../css/reset.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body id="works">
+
+    <div class="wrap">
+
+
+        <div id="scroll_opacity">
+
+            <header class="head">
+
+                <div class="title_logo">
+                    <h1><a href="../index.html"><img src="../img/top_logo.png" alt=""></a></h1>
+                </div>
+
+                <nav>
+                    <ul>
+                        <li><a href="../about/index.html">会社案内</a></li>
+                        <li><a href="index.html">事業実績</a></li>
+                        <li><a href="../corporation/index.html">法人の方</a></li>
+                        <li><a href="../private/index.html">個人の方</a></li>
+                        <li><a href="../contact/index.html">お問い合わせ</a></li>
+
+                    </ul>
+                </nav>
+            </header>
+
+            <main>
+
+                <section>
+
+                    <div class="contents">
+                        <div class="imgbox">
+                            <img src="../img/about_image01.png" alt="">
+
+                        </div>
+
+                    </div>
+
+                    <h3 id="works_fade1">WORKS</h3>
+                    <p id="works_fade2">事業実績</p>
+
+                    <div class="contents">
+
+
+                        <ul class="tab clearfix">
+                            <li class="active">公共事業</li>
+                            <li>精密部品</li>
+                            <li>ビル</li>
+                            <li>その他</li>
+                        </ul>
+
+                        <div class="area">
+
+                            <!-------------------------------------->
+
+                            <ul class="show">
+                                <li>
+                                    <h4>鉄道会社の基本・実施設計、線路の詳細設計</h4>
+                                    <p><img src="../img/works_image01.png" alt=""></p>
+                                </li>
+                            </ul>
+
+                            <ul>
+                                <li>
+                                    <h4>スマートフォンのCPUチップ詳細設計</h4>
+                                    <p><img src="../img/works_image02.png" alt=""></p>
+                                </li>
+                            </ul>
+
+                            <ul>
+                                <li>
+                                    <h4>みなとみらいグローバルセンター</h4>
+                                    <p><img src="../img/works_image03.png" alt=""></p>
+                                </li>
+                            </ul>
+
+                            <ul>
+                                <li>
+                                    <h4>最先端の再生医療</h4>
+                                    <p><img src="../img/works_image04.png" alt=""></p>
+                                </li>
+                            </ul>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                </section>
+
+
+
+            </main>
+
+
+            <footer>
+                <a href="../contact/index.html">お問い合わせ</a>
+                <h2>© 2020 日本製鉄技巧</h2>
+            </footer>
+
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <!--jQuery本体-->
+    <script src="../js/jquery-1.11.2.min.js"></script>
+
+    <!--即時関数-->
+    <script>
+        $(function() {
+
+            //セクションのh3とpフェードイン用
+
+            $(window).scroll(function() {
+                $("#works_fade1,#works_fade2").each(function() {
+                    var imgPos = $(this).offset().top;
+                    var scroll = $(window).scrollTop();
+                    var windowHeight = $(window).height();
+                    if (scroll > imgPos - windowHeight + windowHeight / 5) {
+                        $(this).addClass("works_in");
+                    } else {
+                        $(this).removeClass("works_in");
+                    }
+                });
+            });
+
+
+            //tab切り替えメニュー
+
+            // ①タブをクリックしたら発動
+            $('.tab li').click(function() {
+
+                // ②クリックされたタブの順番を変数に格納
+                var index = $('.tab li').index(this);
+
+                // ③クリック済みタブのデザインを設定したcssのクラスを一旦削除
+                $('.tab li').removeClass('active');
+
+                // ④クリックされたタブにクリック済みデザインを適用する
+                $(this).addClass('active');
+
+                // ⑤コンテンツを一旦非表示にし、クリックされた順番のコンテンツのみを表示
+                $('.area > ul').removeClass('show').eq(index).addClass('show');
+
+            });
+
+
+        });
+    </script>
+
+</body></html>
