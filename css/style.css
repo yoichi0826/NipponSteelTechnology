@@ -15,11 +15,18 @@
 ****/
 
 
+html {
+    scroll-behavior: smooth;
+}
+
+
 body {
     text-shadow: 0 0 1px #777;
     font-family: YuMincho, "Yu Mincho", 游ゴシック, 游明朝体, "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "ＭＳ 明朝", "MS Mincho", sans-serif;
     animation: FadeIN 0.48s ease-out;
 }
+
+
 
 @keyframes FadeIN {
 
@@ -44,6 +51,7 @@ img {
 
 
 /****************************************下層ページ共通*************************************************/
+
 
 
 .head {
@@ -99,7 +107,7 @@ section > p {
     transition: 1s ease-out;
     opacity: 0;
     transform: scaleX(0);
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 
 .about_in {
@@ -114,6 +122,28 @@ section > p {
     justify-content: center;
     margin-bottom: 200px;
 }
+
+
+.contents {
+    margin: 0 auto;
+    width: 960px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 200px;
+}
+
+.contents:last-child {
+    margin-bottom: 0px;
+}
+
+#about .contents:nth-of-type(4) {
+    margin-bottom: 75px;
+}
+
+#about .contents:nth-of-type(5) {
+    margin-bottom: 75px;
+}
+
 
 .imgbox {
     width: auto;
@@ -149,6 +179,30 @@ section > p {
     justify-content: center;
 }
 
+#about .textbox p {
+    z-index: -1;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    background-color: #F2F9FA;
+
+}
+
+#about .contents:nth-of-type(4) .textbox {
+    width: auto;
+}
+
+#about .contents:nth-of-type(4) .textbox > p {
+    background-color: white;
+}
+
+#about .contents:nth-of-type(6) .textbox {
+    width: auto;
+}
+
+#about .contents:nth-of-type(6) .textbox > p {
+    background-color: white;
+}
 
 #underline01::after {
     content: "";
@@ -212,24 +266,30 @@ footer > h2 {
     transform: scaleX(1);
 }
 
+
+#works .contents:nth-of-type(1) {
+    width: 100%;
+    box-shadow: 0 0 5px #010440;
+}
+
 #works .contents:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
     box-shadow: 0 0 5px #010440;
 }
 
 .tab {
     width: 100%;
+    display: flex;
 }
 
 .tab li {
     list-style: none;
     width: 100%;
-    height: 150px;
     cursor: pointer;
     transition: .24s;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
+    padding: 10px 0;
     background-color: #010440;
     transition: .24s;
     color: white;
@@ -252,8 +312,6 @@ footer > h2 {
 
 .area .show {
     width: 100%;
-    height: 600px;
-    overflow: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -280,6 +338,393 @@ footer > h2 {
 
 
 
+
+/****************************************法人の方へ*************************************************/
+
+
+.corporation_in {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+
+#corporation .contents:nth-of-type(1) {
+    width: 100%;
+    box-shadow: 0 0 5px #010440;
+}
+
+#corporation .contents:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+
+#corporation .contents:nth-of-type(3) {
+    justify-content: space-between;
+}
+
+#corporation .contents:nth-of-type(3) > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 5px #010440;
+    width: 47.5%;
+    padding: 20px 0;
+}
+
+
+#corporation .contents:nth-of-type(3) > div > p {
+    font-weight: bold;
+}
+
+#corporation .contents:nth-of-type(3) > div > img {
+    width: 128px;
+    height: 128px;
+    margin: 50px auto;
+}
+
+#corporation .contents:nth-of-type(3) > div > a {
+    text-decoration: none;
+    background-color: #022340;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+}
+
+
+
+/****************************************個人の方へ*************************************************/
+
+
+.private_in {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+
+#private .contents:nth-of-type(1) {
+    width: 100%;
+    box-shadow: 0 0 5px #010440;
+}
+
+
+#private .contents:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+
+#private .contents:nth-of-type(3) {
+    justify-content: space-between;
+}
+
+#private .contents:nth-of-type(3) > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 5px #010440;
+    width: 47.5%;
+    padding: 20px 0;
+}
+
+
+#private .contents:nth-of-type(3) > div > p {
+    font-weight: bold;
+}
+
+#private .contents:nth-of-type(3) > div > img {
+    width: 128px;
+    height: 128px;
+    margin: 50px auto;
+}
+
+#private .contents:nth-of-type(3) > div > a {
+    text-decoration: none;
+    background-color: #022340;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+}
+
+
+
+/****************************************お問い合わせ*************************************************/
+
+
+.contact_in {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+
+#contact .contents:nth-of-type(1) {
+    width: 100%;
+    box-shadow: 0 0 5px #010440;
+}
+
+#contact .contents:nth-of-type(2) {
+    box-shadow: 0 0 5px #010440;
+}
+
+
+form#mail_form {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+form#mail_form dl {
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+form#mail_form dl dt {
+    clear: both;
+    width: 35%;
+    float: left;
+    border-top: 1px solid #cccccc;
+    padding: 15px 0;
+    text-align: right;
+    overflow: hidden;
+}
+
+form#mail_form dl dd {
+    width: 65%;
+    float: right;
+    border-top: 1px solid #cccccc;
+    padding: 15px 0 15px 5%;
+}
+
+form#mail_form dl dt:first-child,
+form#mail_form dl dt:first-child + dd {
+    border: none;
+}
+
+form#mail_form dl dt span {
+    display: block;
+    font-size: 85%;
+    color: #3377ff;
+}
+
+
+/* -- for JavaScript ここから -------------------------------------------------------------------------------- */
+
+form#mail_form dl dt span.required,
+form#mail_form dl dt span.optional {
+    display: inline-block;
+    float: left;
+    color: #ffffff;
+    padding: 4px 10px;
+    border-radius: 3px;
+}
+
+form#mail_form dl dt span.required {
+    background: #d9534f;
+    border: 1px solid #d43f3a;
+}
+
+form#mail_form dl dt span.optional {
+    background: #337ab7;
+    border: 1px solid #2e6da4;
+}
+
+form#mail_form dl dd span.error_blank,
+form#mail_form dl dd span.error_format,
+form#mail_form dl dd span.error_match {
+    display: block;
+    color: #ff0000;
+    margin-top: 3px;
+}
+
+
+span.loading {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border-top: 5px solid rgba(255, 255, 255, 0.2);
+    border-right: 5px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 5px solid rgba(255, 255, 255, 0.2);
+    border-left: 5px solid #ffffff;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation: load-circle 1.0s linear infinite;
+    animation: load-circle 1.0s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -30px;
+    margin-left: -30px;
+}
+
+@-webkit-keyframes load-circle {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes load-circle {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+
+/* -- for JavaScript ここまで -------------------------------------------------------------------------------- */
+
+
+form#mail_form input[type="text"],
+form#mail_form input[type="email"],
+form#mail_form input[type="tel"] {
+    max-width: 90%;
+    padding: 7px 2%;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    background: #fafafa;
+    -webkit-appearance: none;
+    font-size: 100%;
+    font-family: inherit;
+    margin-top: 7px;
+}
+
+form#mail_form input[type="text"]:focus,
+form#mail_form input[type="email"]:focus,
+form#mail_form input[type="tel"]:focus,
+form#mail_form textarea:focus {
+    box-shadow: 0px 0px 5px #55ccff;
+    border: 1px solid #55ccff;
+    background: #ffffff;
+}
+
+form#mail_form ul li input[type="radio"],
+form#mail_form ul li input[type="checkbox"] {
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+form#mail_form ul li:first-child input[type="radio"],
+form#mail_form ul li:first-child input[type="checkbox"] {
+    margin-top: 0px;
+}
+
+form#mail_form select {
+    font-size: 100%;
+    font-family: inherit;
+    margin-top: 10px;
+}
+
+form#mail_form textarea {
+    display: block;
+    width: 90%;
+    max-width: 90%;
+    height: 200px;
+    padding: 7px 2%;
+    resize: vertical;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    background: #fafafa;
+    -webkit-appearance: none;
+    font-size: 100%;
+    font-family: inherit;
+}
+
+
+form#mail_form ul {
+    list-style-type: none;
+}
+
+form#mail_form ul li label:hover {
+    cursor: pointer;
+}
+
+
+form#mail_form input#company {
+    width: 60%;
+}
+
+form#mail_form input#name_1,
+form#mail_form input#name_2,
+form#mail_form input#read_1,
+form#mail_form input#read_2,
+form#mail_form input#postal,
+form#mail_form input#phone,
+form#mail_form input#schedule {
+    width: 30%;
+}
+
+form#mail_form input#mail_address,
+form#mail_form input#mail_address_confirm {
+    width: 80%;
+}
+
+form#mail_form input#postal + a {
+    display: inline-block;
+    padding: 5px 15px;
+    border: 1px solid #46b8da;
+    border-radius: 3px;
+    background: #5bc0de;
+    font-size: 100%;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+form#mail_form input#postal + a:hover {
+    cursor: pointer;
+    background: #31b0d5;
+    border: 1px solid #269abc;
+}
+
+form#mail_form input#address {
+    width: 90%;
+}
+
+
+form#mail_form p#form_submit {
+    width: 90%;
+    margin: 0 auto;
+    padding: 15px 0;
+    border-top: 1px solid #cccccc;
+}
+
+form#mail_form input[type="button"] {
+    padding: 7px 20px;
+    border: 1px solid #4cae4c;
+    border-radius: 3px;
+    background: #5cb85c;
+    font-size: 100%;
+    color: #ffffff;
+    font-family: inherit;
+    -webkit-appearance: none;
+}
+
+form#mail_form input[type="button"]:hover {
+    cursor: pointer;
+    background: #449d44;
+    border: 1px solid #398439;
+}
+
+form#mail_form input#form_submit_button {
+    margin-left: 40%;
+
+}
 
 /****************************************トップページ固有*************************************************/
 

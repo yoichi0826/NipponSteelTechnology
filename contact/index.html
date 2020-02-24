@@ -8,7 +8,7 @@
     <!--ビューポート-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>会社案内 | 日本製鉄技巧</title>
+    <title>お問い合わせ | 日本製鉄技巧</title>
     <link rel="icon" href="../favicon.ico">
     <link href="../css/reset.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
@@ -16,14 +16,14 @@
 
 </head>
 
-<body id="about">
+<body id="contact">
 
     <div class="wrap">
 
 
         <div id="scroll_opacity">
 
-            <header class="head">
+            <header class="head" id="PageTop">
 
                 <div class="title_logo">
                     <h1><a href="../index.html"><img src="../img/top_logo.png" alt=""></a></h1>
@@ -31,11 +31,11 @@
 
                 <nav>
                     <ul>
-                        <li><a href="index.html">会社案内</a></li>
+                        <li><a href="../about/index.html">会社案内</a></li>
                         <li><a href="../works/index.html">事業実績</a></li>
                         <li><a href="../corporation/index.html">法人の方</a></li>
                         <li><a href="../private/index.html">個人の方</a></li>
-                        <li><a href="../contact/index.html">お問い合わせ</a></li>
+                        <li><a href="index.html">お問い合わせ</a></li>
 
                     </ul>
                 </nav>
@@ -47,93 +47,61 @@
 
                     <div class="contents">
                         <div class="imgbox">
-                            <img src="../img/about_image01.png" alt="">
-
-                        </div>
-
-                        <div class="textbox">
-                            <p>物に命を吹き込む。</p>
+                            <img src="../img/contact_image00.png" alt="">
 
                         </div>
 
                     </div>
 
-                    <div class="contents">
-
-                        <div class="textbox">
-                            <p>暮らしに革新を。</p>
-
-                        </div>
-
-                        <div class="imgbox">
-                            <img src="../img/about_image02.png" alt="">
-
-                        </div>
-
-                    </div>
-
-                    <div class="contents">
-
-                        <div class="imgbox">
-                            <img src="../img/about_image03.png" alt="">
-
-                        </div>
-
-
-                        <div class="textbox">
-                            <p>21世紀。<br>ドラえもんが居る未来。</p>
-
-                        </div>
-
-                    </div>
-
-
-                    <h3 id="about_fade1">ABOUT</h3>
-                    <p id="about_fade2">会社案内</p>
+                    <h3 id="contact_fade1">CONTACT</h3>
+                    <p id="contact_fade2">お問い合わせ</p>
 
                     <div class="contents">
 
 
-                        <div class="textbox">
-                            <p id="underline01">日本製鉄技巧の仕事は、人々の快適や安全を保ち、長く愛用される</p>
-                            <p id="underline02">製品を創り、記憶に刻まれていく大きな大きなモノづくり。</p>
-                            <p id="underline03">百年もの間、茨城で数えきれないほどの実績をつくってきました。</p>
+                        <form action="" method="post" id="mail_form">
+                            <dl>
+                                <dt>会社名<span>Company Name</span></dt>
+                                <dd><input type="text" id="company" name="company" value="" /></dd>
 
-                        </div>
+                                <dt>名前<span>Your Name</span></dt>
+                                <dd class="required"><input type="text" id="name_1" name="name_1" value="" /> <input type="text" id="name_2" name="name_2" value="" /></dd>
+
+                                <dt>ふりがな<span>Name Reading</span></dt>
+                                <dd><input type="text" id="read_1" name="read_1" value="" /> <input type="text" id="read_2" name="read_2" value="" /></dd>
+
+                                <dt>メールアドレス<span>Mail Address</span></dt>
+                                <dd class="required"><input type="email" id="mail_address" name="mail_address" value="" /></dd>
+
+                                <dt>メールアドレス<br />(確認用)<span>Mail Address Confirm</span></dt>
+                                <dd><input type="email" id="mail_address_confirm" name="mail_address_confirm" value="" /></dd>
+
+
+                                <dt>お問い合わせの種類<span>Inquiry Kind</span></dt>
+                                <dd>
+                                    <ul>
+                                        <li><label><input type="radio" class="kind" name="kind[]" value="商品について" />商品について</label></li>
+                                        <li><label><input type="radio" class="kind" name="kind[]" value="採用について" />採用について</label></li>
+                                        <li><label><input type="radio" class="kind" name="kind[]" value="ご意見・ご要望" />ご意見・ご要望</label></li>
+
+                                    </ul>
+                                </dd>
+
+
+
+                                <dt>お問い合わせの内容<span>Contents</span></dt>
+                                <dd class="required"><textarea id="contents" name="contents" cols="40" rows="5"></textarea></dd>
+
+                            </dl>
+
+                            <p id="form_submit"><input type="button" id="form_submit_button" value="送信する" /></p>
+                        </form>
+
+
+
+
 
                     </div>
-
-                    <div class="contents">
-
-                        <div class="textbox">
-                            <p>代表取締役社長<br>二本　正哲</p>
-
-                        </div>
-
-                        <div class="imgbox">
-                            <img src="../img/about_image04.png" alt="">
-
-                        </div>
-
-                    </div>
-
-                    <div class="contents">
-
-
-                        <div class="textbox">
-                            <p>よい製品とは何か。<br>
-                                それは価格であり、耐久性であり、デザインである。<br>
-                                使う人によって様々な価値観が存在します。<br>
-                                作り手の"自己満足"ではなく、使う人のことを考える。<br>
-                                日本製鉄技巧では、そんなすべての人の価値観を満たすよう、<br>
-                                奮闘して参りました。<br>
-                                創業者の意思を100年経っても守り続けている。<br>
-                                そんな、会社です。</p>
-
-                        </div>
-
-                    </div>
-
 
 
 
@@ -145,7 +113,7 @@
 
 
             <footer>
-                <a href="../contact/index.html">お問い合わせ</a>
+                <a href="#PageTop">一番上に戻る</a>
                 <h2>© 2020 日本製鉄技巧</h2>
             </footer>
 
@@ -169,39 +137,22 @@
             //セクションのh3とpフェードイン用
 
             $(window).scroll(function() {
-                $("#about_fade1,#about_fade2").each(function() {
+                $("#contact_fade1,#contact_fade2").each(function() {
                     var imgPos = $(this).offset().top;
                     var scroll = $(window).scrollTop();
                     var windowHeight = $(window).height();
                     if (scroll > imgPos - windowHeight + windowHeight / 5) {
-                        $(this).addClass("about_in");
+                        $(this).addClass("contact_in");
                     } else {
-                        $(this).removeClass("about_in");
+                        $(this).removeClass("contact_in");
                     }
                 });
             });
 
 
-            //会社案内のアンダーライン用
-
-            $(window).scroll(function() {
-                $("#underline01,#underline02,#underline03").each(function() {
-                    var imgPos = $(this).offset().top;
-                    var scroll = $(window).scrollTop();
-                    var windowHeight = $(window).height();
-                    if (scroll > imgPos - windowHeight + windowHeight / 5) {
-                        $(this).addClass("underline_in");
-                    } else {
-                        $(this).removeClass("underline_in");
-                    }
-                });
-            });
 
 
         });
-
     </script>
 
-</body>
-
-</html>
+</body></html>
